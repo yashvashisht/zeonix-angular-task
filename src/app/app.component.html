@@ -1,0 +1,27 @@
+
+<div class="container-main">
+  <div class="header">
+    <h1>Weather-tracker</h1>
+  </div>
+<div class="search">
+    <form #form >
+      <input type="text" placeholder="Search city"color="blue" name="city"
+      [(ngModel)]="cityName">
+    </form>
+    <button type="button" (click)="onSubmit()">Submit</button>
+  </div>
+ <div class="citydata"> <span> Today's weather in {{weatherData.name}}</span></div>
+
+  <div class="container" *ngIf="weatherData as wd">
+
+    <div class="upper-data">
+      <ng-template #coldWeather>
+      </ng-template>
+  
+      <p>Temperature : {{weatherData.main.temp}}</p>
+      <p>Description: {{weatherData.weather[0].description}}</p>
+      <p>Main: {{weatherData.weather[0].main}}</p>
+      <p>Wind Speed: {{weatherData.wind.speed}}</p>
+
+  </div>
+  <router-outlet></router-outlet>

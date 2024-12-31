@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Lato', sans-serif;
+    background-color: #f4f6f9;  
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .container-main {
+    width: 100%;
+    max-width: 380px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .header h1 {
+    font-size: 2.3rem;
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  .search {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .search form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .search input {
+    padding: 14px;
+    font-size: 1.2rem;
+    width: 70%;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    outline: none;
+    transition: all 0.3s ease;
+    background-color: #f9f9f9;
+  }
+  
+  .search input:focus {
+    border-color: #4CAF50;
+    background-color: #fff;
+  }
+  
+  .search button {
+    padding: 14px 20px;
+    margin-left: 10px;
+    font-size: 1.1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .search button:hover {
+    background-color: #45a049;
+  }
+  
+  .search button:active {
+    background-color: #388e3c;
+  }
+  
+  /* City data section */
+  .citydata {
+    margin-top: 20px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #444;
+  }
+  
+  .container {
+    margin-top: 25px;
+    padding: 20px;
+    background: #f7f7f7;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .upper-data p {
+    margin: 12px 0;
+    font-size: 1.1rem;
+    color: #555;
+  }
+  
+  .upper-data h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-top: 15px;
+  }
+  
+  /* Cold Weather Badge */
+  .upper-data .cold-weather {
+    background-color: #00bcd4;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    margin-top: 15px;
+  }
+  
+  .upper-data .warm-weather {
+    background-color: #ff9800;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    margin-top: 15px;
+  }
+  
+  .upper-data .cold-weather h3, 
+  .upper-data .warm-weather h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+  
+  .upper-data .error-message {
+    color: #ff4040;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  /* Smooth animations */
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  .container-main,
+  .container,
+  .search input,
+  .search button {
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .container-main {
+      width: 90%;
+      padding: 20px;
+    }
+  
+    .header h1 {
+      font-size: 2rem;
+    }
+  
+    .search input {
+      width: 100%;
+    }
+  
+    .search button {
+      width: 35%;
+      font-size: 1.2rem;
+    }
+  
+    .upper-data p {
+      font-size: 1rem;
+    }
+  
+    .upper-data h3 {
+      font-size: 1.3rem;
+    }
+  }
+  
